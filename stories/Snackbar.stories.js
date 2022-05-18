@@ -2,11 +2,11 @@ import React from 'react';
 
 import {storiesOf} from '@storybook/react';
 
-import {Snackbar} from '../src/components/Snackbar';
+import {SnackbarExample} from '../src/examples/SnackbarExample';
 
 
 const stories = storiesOf('App Test', module);
 
 stories.add('Story 1', () => {
-    return <Snackbar />
+    return <SnackbarExample open />
 })
