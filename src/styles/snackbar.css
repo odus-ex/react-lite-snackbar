@@ -1,0 +1,6 @@
+.snackbar_container {
+    border: 2px solid red;
+    position: fixed;
+    right: 10px;
+
+}
