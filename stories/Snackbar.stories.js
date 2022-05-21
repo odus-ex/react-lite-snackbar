@@ -1,12 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import {storiesOf} from '@storybook/react';
+import { storiesOf } from "@storybook/react";
 
-import {SnackbarExample} from '../src/examples/SnackbarExample';
+import { SnackbarExample } from "../src/examples/SnackbarExample";
 
+const stories = storiesOf("app test", module);
 
-const stories = storiesOf('App Test', module);
-
-stories.add('Story 1', () => {
-    return <SnackbarExample open />
-})
+stories.add("Example", () => {
+  return <SnackbarExample />;
+});
