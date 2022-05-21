@@ -1,6 +1,80 @@
 .snackbar_container {
-    border: 2px solid red;
-    position: fixed;
-    right: 10px;
+  /* border: 2px solid green; */
+  position: fixed;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 
+.snackbar_wrapper {
+  /* border: 2px solid red; */
+  display: flex;
+  background-color: blue;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+  min-width: 300px;
+  min-height: 50px;
+  max-width: 600px;
+  max-height: 100px;
+  width: fit-content;
+  justify-content: space-between;
+  color: white;
+}
+
+.bg_success {
+  background-color: green;
+}
+
+.bg_info {
+  background-color: rgb(241, 209, 47);
+}
+
+.bg_error {
+  background-color: red;
+}
+
+.snack_message_wrapper {
+  display: flex;
+  width: 100%;
+  text-align: left;
+  align-items: center;
+}
+
+.snack_close_wrapper {
+  display: flex;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.snack_close_icon_wrapper {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  position: relative;
+  width: 1rem;
+}
+
+.snack_close_icon_wrapper:before,
+.snack_close_icon_wrapper:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0.25rem;
+  background: white;
+  border-radius: 0.25rem;
+}
+
+.snack_close_icon_wrapper:before {
+  transform: rotate(45deg);
+}
+
+.snack_close_icon_wrapper:after {
+  transform: rotate(-45deg);
 }
