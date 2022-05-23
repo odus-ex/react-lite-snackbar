@@ -1,7 +1,7 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import "../../styles/snackbar.css";
 
-export const Snackbar = ({ configObject }) => {
+const Snackbar = ({ configObject }) => {
   let {
     message,
     type,
@@ -62,3 +62,5 @@ export const Snackbar = ({ configObject }) => {
     </div>
   );
 };
+
+export default Snackbar;
