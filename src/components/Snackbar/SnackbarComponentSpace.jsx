@@ -1,9 +1,8 @@
-import { useCallback, useRef } from "react";
-import { useGlobalContext } from "../../contexts/GlobalContext";
+import React from "react";
 import "../../styles/snackbar.css";
-import { Snackbar } from "./Snackbar";
+import Snackbar from "./Snackbar.jsx";
 
-export const SnackbarComponentSpace = ({
+const SnackbarComponentSpace = ({
   instances = {},
   closeAll = false,
   openAll = false,
@@ -27,3 +26,5 @@ export const SnackbarComponentSpace = ({
     </div>
   );
 };
+
+export default SnackbarComponentSpace;

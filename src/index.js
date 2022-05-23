@@ -1,1 +1,1 @@
-export * from "./components/Snackbar";
+export { default } from "./components/Snackbar/index.js";
