@@ -2,7 +2,7 @@ import React from "react";
 
 import { storiesOf } from "@storybook/react";
 
-import { SnackbarExample } from "../src/examples/SnackbarExample";
+import { SnackbarExample } from "../examples/SnackbarExample";
 
 const stories = storiesOf("app test", module);
 

@@ -19,7 +19,7 @@ export const SnackbarExample = () => {
     //separate open and close functions for closing all and opening all
     instance1: {
       open: showSnack,
-      message: "Pop 1",
+      message: "Pop it up",
       type: "info",
       onCloseCallback: () => console.log("This is a callback"),
       onOpenCallback: () => {},
