@@ -10,7 +10,7 @@
 .snackbar_wrapper {
   /* border: 2px solid red; */
   display: flex;
-  background-color: blue;
+  background-color: var(--bg-color-default);
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   margin-top: 1rem;
@@ -24,15 +24,15 @@
 }
 
 .bg_success {
-  background-color: green;
+  background-color: var(--bg-color-success);
 }
 
 .bg_info {
-  background-color: rgb(241, 209, 47);
+  background-color: var(--bg-color-info);
 }
 
 .bg_error {
-  background-color: red;
+  background-color: var(--bg-color-default);
 }
 
 .snack_message_wrapper {
