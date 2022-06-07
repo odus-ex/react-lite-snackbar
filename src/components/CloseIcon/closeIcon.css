@@ -1,0 +1,26 @@
+.snack_close_icon_wrapper {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  position: relative;
+  width: 1rem;
+}
+
+.snack_close_icon_wrapper:before,
+.snack_close_icon_wrapper:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0.25rem;
+  background: white;
+  border-radius: 0.25rem;
+}
+.snack_close_icon_wrapper:before {
+  transform: rotate(45deg);
+}
+.snack_close_icon_wrapper:after {
+  transform: rotate(-45deg);
+}

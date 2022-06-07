@@ -1,2 +1,2 @@
-import "./styles/globals.css";
-export { default } from "./components/Snackbar/index.js";
+import "./globals.css";
+export { default } from "./components/SnackbarsContainer/index.js";
