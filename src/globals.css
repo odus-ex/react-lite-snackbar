@@ -1,0 +1,14 @@
+/* global variables */
+:root {
+  --bg-color-success: #158d15;
+  --bg-color-error: #e21b1b;
+  --bg-color-default: #001732;
+  --bg-color-info: #2340ff;
+  --bg-color-warning: #f49426;
+
+  --text-color-dark: #0a0a0a;
+  --text-color-light: #f4f4f4;
+
+  --snackbar-shadow-light: #bababa;
+  --snackbar-shadow-dark: #6c6c6c;
+}
