@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
+import "./snackbar.css";
+
 import CloseIcon from "../CloseIcon/index.js";
 import LinearRegress from "../LinearRegress/index.js";
-import "./snackbar.css";
+
+import CONFIG from "../../config";
 
 const Snackbar = ({ configObject }) => {
   let {
@@ -10,25 +13,23 @@ const Snackbar = ({ configObject }) => {
     toggleOpenCloseHandler,
     onCloseCallback,
     onOpenCallback,
-    autoHide,
+    autoHide = true,
     autoHideTimeOut,
     disableCloseOnClick,
     customBgColorClass,
     customTextColorClass,
+    showRegressBar = true,
   } = configObject;
 
-  const styleTobgColorClassMap = {
-    success: "bg_success",
-    error: "bg_error",
-    info: "bg_info",
-    warning: "bg_warning",
-  };
+  let hideInterval =
+    autoHideTimeOut >= CONFIG.minimumAutoTimeout
+      ? autoHideTimeOut
+      : CONFIG.defaultAutoTimeout;
 
   // Manage autoHide
   useEffect(() => {
     onOpenCallback();
     if (autoHide) {
-      const hideInterval = autoHideTimeOut ? autoHideTimeOut : 3000;
       setTimeout(() => handleCloseCallbacks(), hideInterval);
     }
   }, []);
@@ -39,10 +40,12 @@ const Snackbar = ({ configObject }) => {
   };
 
   const isCloseBtnVisible = () => {
-    return !disableCloseOnClick && !autoHide;
+    return !disableCloseOnClick;
   };
 
-  const isRegressVisible = () => {};
+  const isRegressVisible = () => {
+    return showRegressBar && autoHide;
+  };
 
   // Components
   const renderSnackMessage = () =>
@@ -58,15 +61,13 @@ const Snackbar = ({ configObject }) => {
     isCloseBtnVisible() ? CloseIcon(handleCloseCallbacks) : null;
 
   const renderSnackRegress = () =>
-    //conditions for linear regress
-
-    LinearRegress(autoHideTimeOut);
+    isRegressVisible ? LinearRegress(hideInterval) : null;
 
   return React.createElement(
     "div",
     {
       className: `snackbar_wrapper ${
-        styleTobgColorClassMap[type.toLowerCase()]
+        CONFIG.styleTobgColorClassMap[type.toLowerCase()]
       }`,
     },
     renderSnackMessage(),
