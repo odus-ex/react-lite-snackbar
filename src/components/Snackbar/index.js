@@ -52,7 +52,9 @@ const Snackbar = ({ configObject }) => {
     React.createElement(
       "section",
       {
-        className: `snack_message_wrapper`,
+        className: `snack_message_wrapper ${
+          isCloseBtnVisible() ? "" : "snack_message_wrapper__full_width"
+        }`,
       },
       message
     );
