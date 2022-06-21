@@ -32,7 +32,7 @@ export const SnackbarExample = () => {
       onCloseCallback: () => {},
       onOpenCallback: () => {},
       toggleOpenCloseHandler: handleSnackbarPop2,
-      autoHide: true,
+      autoHide: false,
       autoHideTimeOut: 4000,
       disableCloseOnClick: true,
     },

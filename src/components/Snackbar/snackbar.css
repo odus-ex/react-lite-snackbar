@@ -50,6 +50,10 @@
   padding: 1rem;
 }
 
+.snack_message_wrapper__full_width {
+  grid-column: 1/3;
+}
+
 .snack_close_wrapper {
   display: flex;
   grid-column: 2/3;
