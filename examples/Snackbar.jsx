@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 // import SnackbarsContainer from "../dist/index.es.js";
 import SnackbarsContainer from "../src/components/SnackbarsContainer/index";
 
