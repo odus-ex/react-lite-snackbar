@@ -8,16 +8,14 @@ import CONFIG from "../../config";
 
 const Snackbar = ({ configObject }) => {
   let {
-    message,
-    type,
+    message = "Your message comes here",
+    type = "info",
     toggleOpenCloseHandler,
     onCloseCallback,
     onOpenCallback,
     autoHide = true,
     autoHideTimeOut,
-    disableCloseOnClick,
-    customBgColorClass,
-    customTextColorClass,
+    disableCloseOnClick = true,
     showRegressBar = true,
   } = configObject;
 
@@ -34,6 +32,7 @@ const Snackbar = ({ configObject }) => {
     }
   }, []);
 
+  //handlers and utility
   const handleCloseCallbacks = () => {
     onCloseCallback();
     toggleOpenCloseHandler();
@@ -63,7 +62,7 @@ const Snackbar = ({ configObject }) => {
     isCloseBtnVisible() ? CloseIcon(handleCloseCallbacks) : null;
 
   const renderSnackRegress = () =>
-    isRegressVisible ? LinearRegress(hideInterval) : null;
+    isRegressVisible() ? LinearRegress(hideInterval) : null;
 
   return React.createElement(
     "div",

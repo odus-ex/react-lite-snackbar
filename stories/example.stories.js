@@ -1,12 +1,15 @@
-import React, { useState } from "react";
-import SnackbarExample from "../examples/Snackbar";
-import SnackbarsContainer from "../src/components/SnackbarsContainer";
+import React from "react";
+import SnackbarsContainer from "../dist/index.js";
 
 export default {
   title: "Example Stories",
+  argTypes: {
+    type: {
+      options: ["info", "warning", "error", "success"],
+      control: { type: "radio" },
+    },
+  },
 };
-
-// const [showSnack, setShowSnack] = useState(false);
 
 const template = (args) => (
   <SnackbarsContainer instances={{ instance1: args }} />
@@ -15,10 +18,14 @@ const template = (args) => (
 export const PrimarySnack = template.bind({});
 
 PrimarySnack.args = {
-  message: "What an informative message",
+  message: "What an informative message!",
   type: "info",
   open: true,
-  toggleOpenCloseHandler: () => {},
   onCloseCallback: () => {},
   onOpenCallback: () => {},
+  toggleOpenCloseHandler: () => {},
+  autoHideTimeOut: 5000,
+  disableCloseOnClick: false,
 };
+
+PrimarySnack.storyName = "Sample Snack";
