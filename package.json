@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "sb": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build-library": "rollup -c"
@@ -31,6 +31,7 @@
     "@storybook/react": "^6.5.5",
     "@storybook/testing-library": "^0.0.11",
     "babel-loader": "^8.2.5",
+    "jest": "^28.1.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "rollup": "^2.74.1",
