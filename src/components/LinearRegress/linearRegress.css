@@ -22,6 +22,6 @@
 
 @keyframes regress {
   100% {
-    width: 1%;
+    width: 0;
   }
 }
