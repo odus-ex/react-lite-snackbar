@@ -1,11 +1,7 @@
 import React from "react";
 import Snackbar from "../Snackbar/index.js";
 
-const SnackbarsContainer = ({
-  instances = {},
-  closeAll = false,
-  openAll = false,
-}) => {
+const SnackbarsContainer = ({ instances = {} }) => {
   //derived states to avoid unintentional mutation
   const __derived_allSnacksObject = { ...instances };
   const __derived_snackQueue = Object.keys(instances).filter(
