@@ -74,7 +74,7 @@ return (
 | type                   | info          | string     | Variant of snackbar. `info`, `success`, `error`, `warning`                                                                   |
 | toggleOpenCloseHandler | -             | function   | A function to toggle snack `open` attribute                                                                                  |
 | onCloseCallback        | -             | function   | A callback function when snackbar is closed                                                                                  |
-| onOpenCallback         | -             | function   | A callback function when snackbar is opended                                                                                 |
+| onOpenCallback         | -             | function   | A callback function when snackbar is opened                                                                                  |
 | autoHide               | `true`        | boolean    | A prop to decide whether to automatically hide snackbar after a stipulated time. Specify the time in `autoHideTimeOut` prop. |
 | autoHideTimeOut        | 3000          | number     | A prop to specify auto hide time. Minimum is 1 second by default.                                                            |
 | disableCloseOnClick    | `true`        | boolean    | A prop to decide whether to show close button or not.                                                                        |
